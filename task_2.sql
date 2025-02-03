@@ -1,6 +1,6 @@
 USE alx_book_store;
 
-CREATE TABLE IF NOT EXISTS authors (
+CREATE TABLE IF NOT EXISTS Authors (
     author_id INT AUTO_INCREMENT PRIMARY KEY,
     author_name VARCHAR(100) NOT NULL,
     country VARCHAR(50)
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS books (
     author_id INT,
     price DECIMAL(10, 2) NOT NULL,
     publication_year INT,
-    FOREIGN KEY (author_id) REFERENCES authors(author_id)
+    FOREIGN KEY (author_id) REFERENCES Authors(author_id)
 );
 
 CREATE TABLE IF NOT EXISTS customers (
